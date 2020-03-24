@@ -20,9 +20,11 @@ module.exports = {
                 // Excluye la carpeta node_modules ( no conviertes estos modulos)
                 exclude: /node_modules/,
                 use: {
-                    loader: 'babel-loader'
-                }
-
+                    loader: 'babel-loader',
+                    options: {
+                      presets: ['@babel/preset-env']
+                    }
+                  }
             },
             {
                 // Testea los archivos .vue
